@@ -1,5 +1,7 @@
 package com.haha.sort;
 
+import com.haha.common.CommonTool;
+
 import java.util.Arrays;
 
 /**
@@ -21,24 +23,12 @@ public class Bubble {
         for (int size = arr.length; size > 0; size--) {
             for (int i = 0; i < size - 1; i++) {
                 //如果第一个元素比后一个元素要大，则交换位置
-                if (greater(arr[i], arr[i + 1])) {
-                    exchange(arr, i, i + 1);
+                if (CommonTool.greater(arr[i], arr[i + 1])) {
+                    CommonTool.exchange(arr, i, i + 1);
                 }
             }
         }
     }
 
 
-    //比较C1是否大于C2
-    private static boolean greater(Comparable c1, Comparable c2) {
-        int result = c1.compareTo(c2);
-        return result > 0;
-    }
-
-    //交换下标i和j的元素
-    private static void exchange(Comparable[] arr, int i, int j) {
-        Comparable temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
 }
