@@ -54,6 +54,10 @@ public class Quick {
         //如果两个位置不重合，要继续移动
         while (startIndex < endIndex) {
             //从右到左，找到一个比基准值小的数据
+            /**
+             * 因为我们的基准值是在数组第一个位置，所以一定要先找小的数据，让左右两个指针，能在小的数据时重合，
+             * 最后将基准值和重合位置交换，移动到中间时，才能保证小的数还在左边
+             */
             while (CommonTool.greater(arr[endIndex], arr[partition]) && startIndex < endIndex) {
                 endIndex--;
             }
