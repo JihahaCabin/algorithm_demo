@@ -1,6 +1,6 @@
 package com.haha.thread;
 
-public class InteruptDemo {
+public class InterruptDemo {
 
     public static void main(String[] args) {
         /**
