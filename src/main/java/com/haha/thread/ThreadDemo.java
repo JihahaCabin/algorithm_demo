@@ -1,4 +1,4 @@
-package com.haha.thread.simple;
+package com.haha.thread;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
