@@ -1,6 +1,7 @@
 package com.haha.leetcode;
 
 /**
+ * 双指针
  * 167. 两数之和 II - 输入有序数组
  * https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/description/
  * 使用双指针，当和大于目标数，则移动大指针，当和小于目标数，移动小指针
