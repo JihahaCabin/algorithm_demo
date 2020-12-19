@@ -22,6 +22,7 @@ public class Heap {
     public static void heapSort(int[] arr) {
 
         //将无序数组调整成大顶堆
+        //从最后一个非叶子节点开始调整，从右到左，从下到上
         for (int i = arr.length / 2 - 1; i >= 0; i--) {
             adjustHeap(arr, i, arr.length);
         }
