@@ -28,4 +28,28 @@ public class FindMin {
         }
         return nums[low];
     }
+
+
+    public int findMin2(int[] nums) {
+
+        if (nums.length == 1) {
+            return nums[0];
+        }
+
+        int low = 1;
+        int high = nums.length - 1;
+
+        while (low < high) {
+            int middle = low + (high - low) / 2;
+            if (nums[middle] > nums[0]) {
+                low = middle + 1;
+            } else {
+                high = middle;
+            }
+        }
+
+
+        return nums[low] > nums[0] ? nums[0] : nums[low];
+
+    }
 }
